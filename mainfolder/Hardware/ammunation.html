@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ammunition Inventory</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- External CSS -->
+    <link rel="stylesheet" href="ammunation.css">
+</head>
+<body>
+    <div class="inventory-container">
+        <div class="header">
+            <div class="actions">
+                <button class="settings-btn"><i class="fas fa-cog"></i> Settings</button>
+                <button class="acquire-btn"><i class="fas fa-plus"></i> Acquire Items</button>
+            </div>
+        </div>
+        <div class="table-container">
+            <table class="inventory-table">
+                <thead>
+                    <tr>
+                        <th>Ammunition</th>
+                        <th>Series</th>
+                        <th>Asset ID</th>
+                        <th>Qty</th>
+                        <th>Status</th>
+                        <th>Issued Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>45mm</td>
+                        <td>Handgun</td>
+                        <td>AS-1001</td>
+                        <td>48</td>
+                        <td><span class="status on-duty">On Duty</span></td>
+                        <td>22/04/2016</td>
+                    </tr>
+                    <tr>
+                        <td>45mm</td>
+                        <td>Handgun</td>
+                        <td>AS-1002</td>
+                        <td>12</td>
+                        <td><span class="status disposed">Disposed</span></td>
+                        <td>27/09/2022</td>
+                    </tr>
+                    <tr>
+                        <td>45mm</td>
+                        <td>Handgun</td>
+                        <td>AS-1003</td>
+                        <td>32</td>
+                        <td><span class="status inventory">In Inventory</span></td>
+                        <td>18/09/2022</td>
+                    </tr>
+                    <tr>
+                        <td>12 gauge</td>
+                        <td>Shotgun</td>
+                        <td>AS-1004</td>
+                        <td>9</td>
+                        <td><span class="status not-used">Not Used</span></td>
+                        <td>16/07/2018</td>
+                    </tr>
+                    <tr>
+                        <td>12 gauge</td>
+                        <td>Shotgun</td>
+                        <td>AS-1005</td>
+                        <td>18</td>
+                        <td><span class="status on-duty">On Duty</span></td>
+                        <td>08/06/2023</td>
+                    </tr>
+                    <tr>
+                        <td>7.62mm</td>
+                        <td>AK-47</td>
+                        <td>AS-2001</td>
+                        <td>22</td>
+                        <td><span class="status inventory">In Inventory</span></td>
+                        <td>18/05/2021</td>
+                    </tr>
+                    <tr>
+                        <td>7.62mm</td>
+                        <td>AK-47</td>
+                        <td>AS-2002</td>
+                        <td>8</td>
+                        <td><span class="status disposed">Disposed</span></td>
+                        <td>18/08/2021</td>
+                    </tr>
+                    <tr>
+                        <td>7.62mm</td>
+                        <td>AK-47</td>
+                        <td>AS-2003</td>
+                        <td>25</td>
+                        <td><span class="status inventory">Inventory</span></td>
+                        <td>21/11/2021</td>
+                    </tr>
+                    <tr>
+                        <td>7.62mm</td>
+                        <td>AK-47</td>
+                        <td>AS-2004</td>
+                        <td>31</td>
+                        <td><span class="status on-duty">On Duty</span></td>
+                        <td>16/02/2017</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <footer>
+            <p>2024 © All rights reserved</p>
+        </footer>
+    </div>
+</body>
+</html>

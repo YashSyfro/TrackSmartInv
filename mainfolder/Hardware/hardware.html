@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory Dashboard</title>
+    <!-- Link to Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-pzwxjR3eR3UnHufbO+BYh2U0YdZxZ2/4dbtZ0L1tpNnXj6KTByJoqykroGJYXZsjmRQxAPyTW3S/+twblx7wbg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="hardware.css">
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        /* Container */
+        .inventory-container {
+            width: 100%;
+            max-width: 800px;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        /* Header */
+        .header {
+            background-color: #007BFF;
+            color: #ffffff;
+            padding: 20px 30px;
+        }
+
+        .header-content {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header h1 {
+            font-size: 28px;
+            display: flex;
+            align-items: center;
+        }
+
+        .header h1 i {
+            margin-right: 10px;
+            color: #ffffff;
+        }
+
+        .header nav {
+            margin-top: 8px;
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        .header nav a {
+            color: #d1eaff;
+            text-decoration: none;
+            margin-right: 5px;
+        }
+
+        .header nav span {
+            color: #ffffff;
+        }
+
+        /* Inventory Items */
+        .inventory-item {
+            border-bottom: 1px solid #e0e0e0;
+            padding: 20px 30px;
+            transition: background-color 0.3s;
+        }
+
+        .inventory-item:hover {
+            background-color: #f9f9f9;
+        }
+
+        .item-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .item-info span {
+            font-size: 18px;
+            color: #333333;
+            display: flex;
+            align-items: center;
+        }
+
+        .item-info span i {
+            margin-right: 8px;
+            color: #007BFF;
+        }
+
+        .check-btn {
+            background-color: #28a745;
+            color: #ffffff;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .check-btn i {
+            margin-left: 6px;
+            transition: transform 0.3s;
+        }
+
+        .check-btn:hover {
+            background-color: #218838;
+        }
+
+        .check-btn.active i {
+            transform: rotate(180deg);
+        }
+
+        /* Item Details */
+        .item-details {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease, opacity 0.4s ease;
+            opacity: 0;
+            margin-top: 10px;
+        }
+
+        .item-details p {
+            font-size: 15px;
+            color: #555555;
+            margin-bottom: 6px;
+        }
+
+        .inventory-item.active .item-details {
+            max-height: 100px;
+            opacity: 1;
+        }
+
+        .inventory-item.active {
+            background-color: #f1f9ff;
+        }
+
+        /* Item Management Section */
+        .item-management,
+        .inventory-tracking {
+            margin: 20px 30px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .item-management h2,
+        .inventory-tracking h2 {
+            font-size: 22px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+
+        .item-management h2 i,
+        .inventory-tracking h2 i {
+            margin-right: 10px;
+            color: #007BFF;
+        }
+
+        .management-actions button,
+        .tracking-features button {
+            background-color: #28a745;
+            color: #ffffff;
+            border: none;
+            padding: 10px 15px;
+            margin-right: 10px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .management-actions button i,
+        .tracking-features button i {
+            margin-right: 8px;
+        }
+
+        .management-actions button:hover,
+        .tracking-features button:hover {
+            background-color: #218838;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-content {
+                align-items: center;
+                text-align: center;
+            }
+
+            .item-info {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .check-btn {
+                margin-top: 10px;
+                width: 100%;
+                justify-content: center;
+            }
+
+            .item-info span {
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="inventory-container">
+
+        <header class="header">
+            <div class="header-content">
+                <h1><i class="fas fa-boxes"></i> Inventory</h1>
+                <nav>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            <div class="inventory-item">
+                <div class="item-info">
+                    <span><i class="fas fa-bullseye"></i> Ammunition</span>
+                    <button class="check-btn" onclick="window.location.href='ammunation.html'">Check <i class="fas fa-chevron-down"></i></button>
+                </div>
+            </div>
+
+            <div class="inventory-item">
+                <div class="item-info">
+                    <span><i class="fas fa-truck"></i> Vehicles</span>
+                    <button class="check-btn" onclick="window.location.href='vehicle.html'">Check <i class="fas fa-chevron-down"></i></button>
+                </div>
+            </div>
+
+            <div class="inventory-item">
+                <div class="item-info">
+                    <span><i class="fas fa-headset"></i> Communication Devices</span>
+                    <button class="check-btn">Check <i class="fas fa-chevron-down"></i></button>
+                </div>
+            </div>
+
+            <div class="inventory-item">
+                <div class="item-info">
+                    <span><i class="fas fa-video"></i> Surveillance Equipment</span>
+                    <button class="check-btn">Check <i class="fas fa-chevron-down"></i></button>
+                </div>
+            </div>
+
+            <div class="inventory-item">
+                <div class="item-info">
+                    <span><i class="fas fa-microchip"></i> Electronics</span>
+                    <button class="check-btn">Check <i class="fas fa-chevron-down"></i></button>
+                </div>
+
+            <div class="item-management">
+                <h2><i class="fas fa-tools"></i> Item Management</h2>
+                <div class="management-actions">
+                    <button><i class="fas fa-plus"></i> Add Item</button>
+                    <button><i class="fas fa-edit"></i> Edit Item</button>
+                    <button><i class="fas fa-trash"></i> Remove Item</button>
+                </div>
+            </div>
+
+            <div class="inventory-tracking">
+                <h2><i class="fas fa-chart-line"></i> Inventory Tracking</h2>
+                <div class="tracking-features">
+                    <button><i class="fas fa-search"></i> Search Inventory</button>
+                    <button><i class="fas fa-sync-alt"></i> Update Inventory</button>
+                </div>
+            </div>
+
+        </main>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audit Update Page</title>
+    <link rel="stylesheet" href="audit.css">
+</head>
+<body>
+
+    <header>
+        <h1>Audit Update</h1>
+    </header>
+
+    <div class="container">
+        <!-- Audit Session Information -->
+        <div class="audit-info">
+            <p><strong>Audit Session:</strong> Q3 Asset Audit</p>
+            <p><strong>Location:</strong> Jodhpur headdepertment</p>
+            <p><strong>Date:</strong> September 28, 2024</p>
+            <div class="progress-bar">
+                <div class="progress-bar-inner">60% completed</div>
+            </div>
+        </div>
+                <!-- Search and Filter Options -->
+                <div class="search-filter">
+                    <input type="text" placeholder="Search by Name, ID, Location">
+                    <select>
+                        <option value="">Filter by Status</option>
+                        <option value="pending">Pending</option>
+                        <option value="verified">Verified</option>
+                        <option value="missing">Missing</option>
+                    </select>
+                    <select>
+                        <option value="">Filter by Asset Type</option>
+                        <option value="laptop">Laptop</option>
+                        <option value="server">Server</option>
+                        <option value="communication-device">Communication Device</option>
+                    </select>
+                </div>
+                        <!-- Audit Table for Asset Updates -->
+        <table>
+            <thead>
+                <tr>
+                    <th>Asset Name/ID</th>
+                    <th>Location</th>
+                    <th>Last Audited Date</th>
+                    <th>Current Status</th>
+                    <th>Condition</th>
+                    <th>Comments/Notes</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Laptop-123</td>
+                    <td>New York Office</td>
+                    <td>2024-09-15</td>
+                    <td>
+                        <select>
+                            <option value="verified">Verified</option>
+                            <option value="in-progress">In Progress</option>
+                            <option value="missing">Missing</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select>
+                            <option value="good">Good</option>
+                            <option value="maintenance">Needs Maintenance</option>
+                            <option value="damaged">Damaged</option>
+                        </select>
+                    </td>
+                    <td><input type="text" placeholder="Comments"></td>
+                    <td>
+                        <button>Update</button>
+                        <button style="background-color: #ff6f00;">Report Missing</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+                <!-- Bulk Update Option -->
+                <div class="bulk-actions">
+                    <div>
+                        <input type="checkbox"> Select Multiple
+                        <select>
+                            <option value="">Bulk Actions</option>
+                            <option value="verified">Mark as Verified</option>
+                            <option value="in-progress">Mark as In Progress</option>
+                        </select>
+                        <button>Apply</button>
+                    </div>
+                </div>
+                        <!-- Save/Submit Buttons -->
+        <div class="save-submit">
+            <button>Save Draft</button>
+            <button>Submit Audit</button>
+        </div>
+    </div>
+
+</body>
+</html>
+
+        
+
+        

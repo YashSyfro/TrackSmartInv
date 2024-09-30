@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Police Department Registration</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <form class="form" id="registrationForm">
+        <h2>Police Department Registration</h2>
+
+        <!-- User Information Section -->
+        <div class="section">
+            <label for="fullName">Full Name</label>
+            <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" required>
+
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" placeholder="Unique username" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        </div>
+
+        <!-- Role Selection -->
+        <div class="section">
+            <label for="role">User Role</label>
+            <select id="role" name="role" required>
+                <option value="">Select a role</option>
+                <option value="officer">Police Officer</option>
+                <option value="admin">Administrator</option>
+            </select>
+        </div>
+
+        <!-- Terms and Conditions -->
+        <div class="section">
+            <label>
+                <input type="checkbox" id="terms" name="terms" required>
+                I agree to the <a href="#">Terms and Conditions</a>.
+            </label>
+        </div>
+
+        <button type="submit" onclick="window.location.href='mainfolder/das1.html'">Register</button>
+    </form>
+</div>
+
+</body>
+</html>

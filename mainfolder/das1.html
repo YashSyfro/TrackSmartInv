@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Dashboard with Search and Chatbot</title>
+    <!-- Google Fonts for Modern Typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Link to External CSS -->
+    <link rel="stylesheet" href="das1.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="header-content">
+            <!-- Replaced Logo Image with Text "Track Smart" -->
+            <div class="logo">
+                <h1>Track Smart</h1>
+            </div>
+            <nav>
+                <a href="#">Home</a>
+                <a href="#">Projects</a>
+                <a href="#">Reports</a>
+                <a href="#">Settings</a>
+                <!-- Added "Contact Us" Link -->
+                <a href="#">Contact Us</a>
+            </nav>
+        </div>
+        <div class="header-right">
+            <div class="department-profile">Department Profile</div>
+            <div class="employee-profile">Employee Profile</div>
+            <!-- AI Chatbot Icon -->
+            <div class="chatbot-icon" id="open-chatbot" aria-label="AI Chatbot">
+                <i class="fas fa-robot"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Section -->
+    <main>
+        <div class="dashboard-container">
+            <h1>Schedule! Track Your Ongoing Schedule</h1>
+            <input type="date" class="date-picker" id="schedule-date" />
+            <div class="dashboard-buttons">
+                <a href="Hardware/hardware.html" class="button">
+                    <i class="fas fa-server"></i>
+                    <span>Hardware</span>
+                </a>
+                <a href="Audit/audit.html" class="button">
+                    <i class="fas fa-clipboard-check"></i>
+                    <span>Audit</span>
+                </a>
+                <a href="Allocation/dss.html" class="button">
+                    <i class="fas fa-tasks"></i>
+                    <span>Allocation</span>
+                </a>
+                <a href="Lifecycle/lifecycle.html" class="button">
+                    <i class="fas fa-sync-alt"></i>
+                    <span>Lifecycle</span>
+                </a>
+                <a href="Cost/cost.html" class="button">
+                    <i class="fas fa-dollar-sign"></i>
+                    <span>Cost</span>
+                </a>
+                <a href="Security/security.html" class="button">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>Security</span>
+                    </a>
+    
+
+    <!-- Footer Section -->
+    <footer>
+        <p>2024 © All rights reserved</p>
+    </footer>
+
+    <!-- Global Search Icon -->
+    <div class="search-icon" id="open-search" aria-label="Global Search">
+        <i class="fas fa-search"></i>
+    </div>
+
+    <!-- Search Overlay -->
+    <div class="search-overlay" id="search-overlay">
+        <div class="search-box">
+            <input type="text" placeholder="Search..." id="search-input">
+            <button class="close-search" id="close-search">&times;</button>
+        </div>
+    </div>
+
+    <!-- Chatbot Popup -->
+    <div class="chatbot-popup" id="chatbot-popup">
+        <div class="chatbot-header">
+            <h2>AI Chatbot</h2>
+            <button class="close-chatbot" id="close-chatbot">&times;</button>
+        </div>
+        <div class="chatbot-body">
+            <p>Hello! How can I assist you today?</p>
+            <!-- Simulated chat messages can be added here -->
+        </div>
+        <div class="chatbot-footer">
+            <input type="text" placeholder="Type your message...">
+        </div>
+    </div>
+
+    <!-- Link to External JavaScript -->
+    <script src="das1.js"></script>
+
+</body>
+</html>

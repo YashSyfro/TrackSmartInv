@@ -1,0 +1,190 @@
+/* Importing Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+/* CSS Variables for Colors */
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #34495e;
+    --accent-color: #1abc9c;
+    --background-color: #f9f9f9;
+    --header-bg: #ecf0f1;
+    --button-bg: #1abc9c;
+    --button-hover: #16a085;
+    --status-on-duty: #27ae60;
+    --status-disposed: #c0392b;
+    --status-inventory: #f39c12;
+    --text-color: #2c3e50;
+    --table-header-bg: #bdc3c7;
+    --table-row-hover: #dfe6e9;
+    --footer-color: #95a5a6;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', Arial, sans-serif;
+}
+
+body {
+    background-color: var(--background-color);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.inventory-container {
+    width: 100%;
+    max-width: 1200px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--header-bg);
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+
+.header h1 {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+
+.actions {
+    display: flex;
+    gap: 15px;
+}
+
+.actions button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: var(--button-bg);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.actions button:hover {
+    background-color: var(--button-hover);
+    transform: translateY(-2px);
+}
+
+.table-container {
+    overflow-x: auto;
+}
+
+.inventory-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 800px;
+}
+
+.inventory-table thead {
+    background-color: var(--table-header-bg);
+}
+
+.inventory-table th, .inventory-table td {
+    padding: 15px 20px;
+    text-align: left;
+    font-size: 0.95rem;
+    color: var(--text-color);
+}
+
+.inventory-table th {
+    font-weight: 500;
+}
+
+.inventory-table tbody tr {
+    transition: background-color 0.3s ease;
+}
+
+.inventory-table tbody tr:hover {
+    background-color: var(--table-row-hover);
+}
+
+.status {
+    padding: 5px 10px;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.status.on-duty {
+    background-color: var(--status-on-duty);
+}
+
+.status.disposed {
+    background-color: var(--status-disposed);
+}
+
+.status.inventory {
+    background-color: var(--status-inventory);
+}
+
+footer {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 0.85rem;
+    color: var(--footer-color);
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .actions {
+        margin-top: 10px;
+    }
+
+    .inventory-table {
+        min-width: 600px;
+    }
+}
+
+@media (max-width: 768px) {
+    .inventory-table {
+        min-width: 500px;
+    }
+}
+
+@media (max-width: 576px) {
+    .inventory-container {
+        padding: 20px;
+    }
+
+    .header h1 {
+        font-size: 1.2rem;
+    }
+
+    .actions button {
+        padding: 8px 16px;
+        font-size: 0.8rem;
+    }
+
+    .inventory-table th, .inventory-table td {
+        padding: 10px 15px;
+        font-size: 0.85rem;
+    }
+
+    footer {
+        font-size: 0.75rem;
+    }
+}

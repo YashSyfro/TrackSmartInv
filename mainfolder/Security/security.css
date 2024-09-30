@@ -1,0 +1,172 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header Styling */
+header {
+    background-color: #34495e;
+    color: #fff;
+    padding: 20px 0;
+}
+
+.header h1 {
+    font-size: 1.8rem;
+}
+
+.header-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.notifications {
+    position: relative;
+    font-size: 1.2rem;
+}
+
+.badge {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background-color: red;
+    color: #fff;
+    border-radius: 50%;
+    padding: 3px 6px;
+    font-size: 0.8rem;
+}
+
+.search-bar {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    width: 300px;
+}
+
+/* Section Headers */
+h2 {
+    font-size: 1.5rem;
+    margin: 20px 0;
+    color: #2c3e50;
+}
+
+/* Card and Grid Layout */
+.grid {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Progress Bar */
+.progress-bar {
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 20px;
+    margin: 10px 0;
+}
+
+.progress-bar span {
+    display: block;
+    background-color: #2ecc71;
+    height: 100%;
+}
+
+/* Threat Level */
+.threat-banner {
+    padding: 10px;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.threat-banner.green { background-color: #2ecc71; }
+.threat-banner.yellow { background-color: #f1c40f; }
+.threat-banner.red { background-color: #e74c3c; }
+
+/* Status and Buttons */
+.status {
+    font-weight: bold;
+}
+
+.status.critical { color: #e74c3c; }
+.status.medium { color: #f1c40f; }
+.status.low { color: #2ecc71; }
+.status.compliant { color: #2ecc71; }
+.status.non-compliant { color: #e74c3c; }
+.status.high-risk { color: #e74c3c; }
+.status.medium-risk { color: #f1c40f; }
+
+button {
+    padding: 8px 16px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+/* Table */
+.incident-logs table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+.incident-logs th, .incident-logs td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+.incident-logs th {
+    background-color: #f2f2f2;
+}
+
+/* Report Theft Button */
+.report-theft {
+    margin-top: 10px;
+    background-color: #e74c3c;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header-actions {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .search-bar {
+        margin-top: 10px;
+        width: 100%;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Security and Compliance Dashboard</title>
+    <link rel="stylesheet" href="security.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1>Security and Compliance Dashboard</h1>
+            <div class="header-actions">
+                <div class="notifications">
+                    <span class="icon">🔔</span>
+                    <span class="badge">3</span>
+                </div>
+                <input type="text" class="search-bar" placeholder="Search for hardware or incidents...">
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Compliance Overview Section -->
+        <section class="compliance-overview">
+            <h2>Compliance Overview</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Overall Compliance Rate</h3>
+                    <div class="progress-bar">
+                        <span style="width: 80%;"></span>
+                    </div>
+                    <p>80% Compliant</p>
+                </div>
+                <div class="card">
+                    <h3>Non-Compliant Assets</h3>
+                    <p>12 Assets <a href="#">View Details</a></p>
+                </div>
+                <div class="card">
+                    <h3>Upcoming Audits</h3>
+                    <p>No upcoming audits</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Security Monitoring Section -->
+        <section class="security-monitoring">
+            <h2>Security Monitoring</h2>
+            <div class="grid">
+                <div class="threat-level">
+                    <h3>Threat Level</h3>
+                    <div class="threat-banner green">Low</div>
+                </div>
+                <div class="vulnerability-summary">
+                    <h3>Vulnerability Summary</h3>
+                    <ul>
+                        <li>Asset 1 - <span class="status critical">Critical</span> <button>View Details</button></li>
+                        <li>Asset 2 - <span class="status medium">Medium</span> <button>View Details</button></li>
+                        <li>Asset 3 - <span class="status low">Low</span> <button>View Details</button></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Incident Reporting and Logs -->
+        <section class="incident-reporting">
+            <h2>Incident Reporting and Logs</h2>
+            <div class="incident-logs">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Incident Type</th>
+                            <th>Date</th>
+                            <th>Status</th>
+                            <th>Action Taken</th>
+                            <th>Details</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Theft</td>
+                            <td>2023-09-01</td>
+                            <td>Resolved</td>
+                            <td>Reported to authorities</td>
+                            <td><button>View Details</button></td>
+                        </tr>
+                        <tr>
+                            <td>Unauthorized Access</td>
+                            <td>2023-08-15</td>
+                            <td>Unresolved</td>
+                            <td>Under Investigation</td>
+                            <td><button>View Details</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <button class="report-theft">Report Theft</button>
+        </section>
+
+        <!-- Asset Tracking and Notifications -->
+        <section class="asset-tracking">
+            <h2>Asset Tracking and Notifications</h2>
+            <div class="grid">
+                <div class="location-tracking">
+                    <h3>Location Tracking</h3>
+                    <p>All assets in place.</p>
+                </div>
+                <div class="alerts">
+                    <h3>Theft & Missing Hardware Alerts</h3>
+                    <ul>
+                        <li>Asset A - Missing <button>Mark Recovered</button></li>
+                        <li>Asset B - Unauthorized Location <button>Investigate</button></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Policy Compliance and Risk Assessment -->
+        <section class="policy-compliance">
+            <h2>Policy Compliance and Risk Assessment</h2>
+            <div class="grid">
+                <div class="policies">
+                    <h3>Compliance Policy List</h3>
+                    <ul>
+                        <li>Encryption Requirement - <span class="status compliant">Compliant</span></li>
+                        <li>Access Control Policy - <span class="status non-compliant">Non-Compliant</span></li>
+                    </ul>
+                </div>
+                <div class="risk-assessment">
+                    <h3>Risk Assessment</h3>
+                    <div class="card">Asset A - <span class="status high-risk">High Risk</span> <button>Update Now</button></div>
+                    <div class="card">Asset B - <span class="status medium-risk">Medium Risk</span> <button>Review Policy</button></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Reports and Analytics Section -->
+        <section class="reports-analytics">
+            <h2>Reports and Analytics</h2>
+            <div class="actions">
+                <button>Generate Report</button>
+                <button>Export as PDF</button>
+            </div>
+            <div class="audit-logs">
+                <h3>Audit Logs</h3>
+                <ul>
+                    <li>Audit 1: Passed - 2023-07-15</li>
+                    <li>Audit 2: Failed - 2023-06-10</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
